@@ -1,8 +1,11 @@
+# random
+
 import random
 
-def load_choices(file_path):
-    with open(file_path, 'r', encoding='utf-8') as f:
-        return [line.strip() for line in f if line.strip()]
+answers = ["Yes! No need to ask!", "Nah", "Meh:/", "Maybe;)", "I dont know, go ask AI"]
 
-def random_choice(choices):
-    return random.choice(choices)
+while True:
+    question = input("Ask me!('quit' to exit): ")
+    if question.lower() == 'quit':
+        break
+    print("I think...: ", random.choice(answers))
